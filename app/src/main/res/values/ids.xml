@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bt_login" type="id" />
+    <item name="et_name" type="id" />
+    <item name="et_email_address" type="id" />
+    <item name="et_password" type="id" />
+    <item name="tv_signup" type="id" />
+    <item name="bt_signup" type="id" />
+</resources>
