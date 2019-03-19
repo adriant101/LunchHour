@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmailAddress;
     private EditText etPassword;
     private TextView tvSignup;
+    private User userObj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +134,7 @@ public class LoginActivity extends AppCompatActivity {
             password = password.trim();
             name = name.trim();
 
+
             if (!userEmail.isEmpty() &&!password.isEmpty() && !name.isEmpty()) {
                 String validated = validateEmailPassword(userEmail, password);
 
@@ -142,6 +144,8 @@ public class LoginActivity extends AppCompatActivity {
                     user.setEmail(userEmail);
                     user.setProperty("name", name);
                     user.setPassword(password);
+
+                    userObj = new User(name, userEmail);
 
                     final ProgressDialog pDialog = ProgressDialog.show(LoginActivity.this,
                             getString(R.string.progress_title),
