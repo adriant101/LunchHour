@@ -15,6 +15,8 @@ public class Truck extends Activity {
     private Button Favorite;
     private EditText MenuList;
 
+    public Truck(){};
+
     public Truck(ImageView imageView, EditText truckName, EditText ownerName, EditText truckPhone, EditText truckAddress, Button favorite, EditText menuList) {
         this.imageView = imageView;
         TruckName = truckName;
