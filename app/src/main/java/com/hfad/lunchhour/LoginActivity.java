@@ -2,9 +2,9 @@ package com.hfad.lunchhour;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +15,6 @@ import com.backendless.Backendless;
 import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
-import com.hfad.lunchhour.MainActivity;
-import com.hfad.lunchhour.R;
 
 public class LoginActivity extends AppCompatActivity {
     private final String TAG = this.getClass().getSimpleName();
@@ -40,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         tvSignup = findViewById(R.id.tv_signup);
         btSignup = findViewById(R.id.bt_signup);
 
-        Backendless.initApp(String.valueOf(this),
+        Backendless.initApp(this,
                 getString(R.string.be_app_id),
                 getString(R.string.be_android_api_key));
 
