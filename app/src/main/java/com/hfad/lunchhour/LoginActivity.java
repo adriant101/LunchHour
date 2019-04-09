@@ -1,6 +1,7 @@
 package com.hfad.lunchhour;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         tvSignup = findViewById(R.id.tv_signup);
         btSignup = findViewById(R.id.bt_signup);
 
-        Backendless.initApp(String.valueOf(this),
+        Backendless.initApp("LoginActivity",
                 getString(R.string.be_app_id),
                 getString(R.string.be_android_api_key));
 
