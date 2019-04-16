@@ -23,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button truck = findViewById(R.id.truckButton);
+
+        truck.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent truckIntent = new Intent(MainActivity.this, Truck.class);
+                startActivity(truckIntent);
+            }
+        });
+
     }
 
 
