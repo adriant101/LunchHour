@@ -56,4 +56,10 @@
         android:layout_height="wrap_content"
         android:text="@string/sign_me_up"
         android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/vendor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vendor" />
 </LinearLayout>
