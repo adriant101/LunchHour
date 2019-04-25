@@ -49,6 +49,15 @@ public class Truck extends Activity {
 
             }
         });
+        Button map = findViewById(R.id.mapButton);
+
+        map.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent mapIntent = new Intent(Truck.this, Map.class);
+                startActivity(mapIntent);
+            }
+        });
     }
 
 
