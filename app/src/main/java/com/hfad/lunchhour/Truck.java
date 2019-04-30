@@ -1,10 +1,14 @@
 package com.hfad.lunchhour;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Truck extends Activity {
     private ImageView imageView;
@@ -14,6 +18,7 @@ public class Truck extends Activity {
     private EditText TruckAddress;
     private Button Favorite;
     private EditText MenuList;
+    private TextView words;
 
     public Truck(){};
 
@@ -33,6 +38,26 @@ public class Truck extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_truck);
+
+        Button Favorite = findViewById(R.id.Favorite);
+
+        Favorite.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+
+
+
+            }
+        });
+        Button map = findViewById(R.id.mapButton);
+
+        map.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent mapIntent = new Intent(Truck.this, Map.class);
+                startActivity(mapIntent);
+            }
+        });
     }
 
 
